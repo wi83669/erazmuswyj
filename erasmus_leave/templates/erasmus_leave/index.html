@@ -1,0 +1,9 @@
+{%if latest_osoba_list %}
+	<ul>
+	{% for osoba in latest_osoba_list %}
+		<li><a href="{% url 'erasmus_leave:detail' osoba.id %}">{{osoba.imie}}</a></li>
+	{% endfor %}
+	</ul>
+{% else %}
+	<p>No osoba are anvailable.</p>
+{% endif %}
