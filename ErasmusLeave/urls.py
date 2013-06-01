@@ -15,4 +15,5 @@ urlpatterns = patterns('',
     # Uncomment the next line to enable the admin:
     url(r'^erasmus_leave/', include('erasmus_leave.urls', namespace="erasmus_leave")),
     url(r'^admin/', include(admin.site.urls)),
+
 )

@@ -9,6 +9,7 @@
 from __future__ import unicode_literals
 
 from django.db import models
+from django.forms import ModelForm
 
 class DecyzjaOKwalifikacji(models.Model):
     
@@ -170,6 +171,13 @@ class Osoba(models.Model):
         return self.imie +" "+ self.nazwisko +" "+ self.pesel
     class Meta:
         db_table = 'osoba'
+        
+class OsobaForm(ModelForm):
+    class Meta:
+        model = Osoba
+#    def save(self, *args, **kwargs):
+#        data = self.cleaned_data
+#        return article
 
 class PlanowaneStudiaZagraniczne(models.Model):
     

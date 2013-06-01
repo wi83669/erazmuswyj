@@ -1,9 +1,20 @@
-{%if latest_osoba_list %}
-	<ul>
-	{% for osoba in latest_osoba_list %}
-		<li><a href="{% url 'erasmus_leave:detail' osoba.id %}">{{osoba.imie}}</a></li>
-	{% endfor %}
-	</ul>
-{% else %}
-	<p>No osoba are anvailable.</p>
-{% endif %}
+<html>
+
+<body>
+
+	<a href="{% url 'erasmus_leave:time' %}">aktualny czas</a>
+	
+	
+	{%if latest_osoba_list %}
+		<ul>
+		{% for osoba in latest_osoba_list %}
+			<li><a href="{% url 'erasmus_leave:detail' osoba.id %}">{{osoba.imie}}</a></li>
+		{% endfor %}
+		</ul>
+	{% else %}
+		<p>No osoba are anvailable.</p>
+	{% endif %}
+	
+<a href="{% url 'erasmus_leave:osobaform' %}">dodaj nową osobę</a>
+</body>
+</html>

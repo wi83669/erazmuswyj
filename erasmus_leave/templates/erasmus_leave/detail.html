@@ -1,1 +1,12 @@
-{{ osoba }}
+<h1>Dane osoby: {{ osoba.imie }} {{ osoba.nazwisko }}</h1>
+<form action="{% url 'erasmus_leave:updateosoba' osoba.id %}" method="post">
+{% csrf_token %}
+imie: <input type="text" name="imie" value="{{osoba.imie}}"/><br>
+nazwisko: {{osoba.nazwisko}}<br>
+pesel: {{osoba.pesel}}<br>
+data urodzenia: {{osoba.data_urodzenia}}<br>
+miejsce urodzenia: {{osoba.miejsce_urodzenia}}<br>
+<input type="submit" value="zapisz"/>
+</form>
+
+<a href="{% url 'erasmus_leave:osoba_editform' osoba.id %}">edytuj</a>
