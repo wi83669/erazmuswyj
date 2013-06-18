@@ -12,18 +12,11 @@
 
 <div id="inner">
 		<div id="left">
-			<div id="menu">
-				<ul>
-					<li><a href="#">link1</a></li>
-					<li><a href="#">link2</a></li>
-					<li><a href="#">link3</a></li>
-					<li><a href="#">link4</a></li>
-				</ul>
-			</div>
+			{% block menu %} menu {% endblock %}
 		</div>
 					
 		<div id="middle">
-			content
+			{% block right %} content {% endblock %}
 		</div>
 </div>
 <div id="l"></div>
