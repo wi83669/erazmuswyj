@@ -6,7 +6,8 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<title>{% block title %} base template{% endblock %}</title>
 		<meta name="author" content="Adrian" />
-		<link href="../../css/base.css" rel="stylesheet" type="text/css" media ="screen"> 
+		{% load staticfiles %}
+		<link href="{% static "css/base.css" %}" rel="stylesheet" type="text/css" media ="screen"> 
 		<!-- Date: 2013-06-17 -->
 	</head>
 	
