@@ -29,5 +29,6 @@ urlpatterns = patterns('',
 	url(r'^contact/$', views.contact, name='contact'),
 	url(r'^(?P<osoba_id>\d+)/osoba_editform/$', views.osoba_editform, name='osoba_editform'),
 	url(r'^osoby/$', views.OsobaList.as_view()),
+	
 
 )

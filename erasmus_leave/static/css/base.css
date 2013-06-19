@@ -1,0 +1,134 @@
+
+html, body {
+	height:100%;
+	margin:0;
+	padding:0;
+}
+body {
+	 background-color: #DDD;
+	 margin: 20px 0 20px 0;
+}
+
+#wrapper {
+	margin:0px auto;
+	background:#FFF;/*  center column colur*/
+	text-align:left;
+	position:relative;
+	z-index:0;
+	min-height:100%;
+	min-width:1000px;
+	max-width:1000px;
+	clear:both;
+	border: 1px solid #FFFFFF;	
+	box-shadow: 0px 0px 10px #888;
+}
+
+#header {
+	background-color: #5555FF;
+	clear:both;
+	position:relative;
+	z-index:2;
+	width:100%;
+	
+	box-shadow: inset 0px 0px 100px -50px #000;
+}
+
+#inner {
+	width:100%;
+	overflow:hidden;
+	position:relative;
+	z-index:3;
+}
+
+/*if we float the middle column we avoid the ie6 3 pixel jog and also keep columns in normal source order (left,middle right) but we need to use a negative margin offset to make it all fit.*/
+#middle {
+	float:left;
+	width:100%;
+	margin-right:-300px;/* width of left and right columns */
+}
+
+#content { 
+	min-height: 300px;
+}
+
+#left {
+	width:150px;
+	position:relative;
+	float:left;
+	z-index:2;
+}
+/*The following  2 absolute columns that just hold the column colours */
+/* there is no need to worry about being removed from the flow because these do not hold content but are just stuck to the parent container and set at 100% height. This ensures that they grow with the parent container. Its a shame that this behaviour doesn't apply to static elements and we'd all be a lot happier. */
+#l {
+	width:150px;
+	height:100%;
+	position:absolute;
+	bottom:0;
+	left:0;
+	background-color: #0A0;/* left column color*/
+	z-index:1;
+	clear:both;
+}
+
+
+
+#footer {
+	background-color: #0A0;
+	min-width:1000px;
+	max-width:1000px;
+	clear:both;
+	margin:auto;
+	position:absolute;
+	bottom:0;
+	z-index:2;
+	height:60px;
+	text-align:center;
+	
+	box-shadow: inset 0px 0px 100px -50px #000;
+}
+
+.clear {
+	clear: both;
+}
+
+#menu {
+	background-color: #0A0;
+}
+
+#menu ul {
+	line-height: 25px;
+	margin:0;
+	padding:0;
+	list-style-type:none;
+	overflow:hidden;
+}
+
+#menu li {
+	float: left;
+	color: #000;
+}
+
+#menu li a:link, a:visited{
+	display:block;
+	width:120px;
+	padding:4px;
+	
+	font-weight:bold;
+	text-align:center;
+	text-decoration:none;
+	text-transform:uppercase;
+	
+	color:#FFFFFF;
+	background-color:#0A0;
+}
+
+#menu li a:hover, a:active{
+	background-color:#080;
+}
+
+#gradient3_login {
+	background-image: -moz-radial-gradient(#3859a9, #4da5e3);
+	background-image: -webkit-gradient(radial, center center, 0, center center, 220, from(#3859a9), to(#4da5e3)); /* stara składnia */
+	background-image: -webkit-radial-gradient(#3859a9, #4da5e3); /* nowa składnia */
+	background-image: radial-gradient(#3859a9, #4da5e3);
+}
