@@ -2,22 +2,21 @@
 {% block title %} - logowanie{% endblock %}
 {% block content%}
 <center>
-<h2>Logowanie na stronę pensjonatu "Pod kwiatami"</h2>
-Logowanie jest wymagane, jeżeli chcesz rezerwować noclegi.
+<h2>System obsługi wyjeżdzających programu Erasmus</h2>
+Logowanie
 <p>
 <div style="margin-left:35%;margin-right:35%;">
 <fieldset>
+	<h1 style="font-size:10em">&#9762;</h1>
     <form method="post" action=".">{% csrf_token %}
-    <div style="text-align:left";>{{ form.as_p }}</div>
-    <input type="hidden" name="next" value="/" />
-    <input type="submit" value="Logowanie"/>    <input type="reset" value="Wartości domyślne"/>
+    <div style="text-align:center";>{{ form.as_p }}</div>
+    <input type="hidden" name="next" value="admin" />
+    <input type="submit" value="Logowanie"/>    <input type="reset" value="Reset"/>
   </form>
 </fieldset>
 </div>
 </center>  
 {% endblock %}
 {% block footer %}
-<p>
-<div style="text-align:center;"><a href="/">Strona główna</a></div>
-</p>
+<div style="text-align:center;"><p>&#169;DrinkTeam&#8482; 2013</p></div>
 {% endblock %}
