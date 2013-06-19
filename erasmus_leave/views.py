@@ -11,6 +11,8 @@ from django.views import generic
 from erasmus_leave.models import *
 from erasmus_leave.forms import ContactForm
 from django.views.generic import ListView
+from django.contrib.auth import logout
+
 
 '''
 def index(request):
@@ -111,3 +113,9 @@ def contact(request):
     return render(request, 'erasmus_leave/contact.html', {
         'form': form,
     })
+    
+def logout_page(request):
+    logout(request)
+    return HttpResponseRedirect("/")
+    
+ 
